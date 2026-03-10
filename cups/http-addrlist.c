@@ -25,6 +25,9 @@
 #  include <fcntl.h>
 #endif /* _WIN32 */
 
+#ifdef __QNX__
+#define s6_addr32 __u6_addr.__u6_addr32
+#endif
 
 /*
  * 'httpAddrConnect()' - Connect to any of the addresses in the list.

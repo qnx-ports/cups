@@ -84,7 +84,7 @@ AC_SUBST([LIBCUPSSTATIC])
 AS_IF([test x$enable_shared = xno], [
     LINKCUPS="../cups/lib$cupsbase.a \$(LIBS)"
     EXTLINKCUPS="-lcups \$LIBS"
-], [test "$host_os_name" = aix], [
+], [test "$host_os_name" = aix || test "$host_os_name" = nto-qnx], [
     LINKCUPS="-L../cups -l${cupsbase} \$(LIBS)"
     EXTLINKCUPS="-lcups \$LIBS"
 ], [

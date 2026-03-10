@@ -60,6 +60,9 @@ typedef struct sockpeercred cupsd_ucred_t;
 #  include <snapd-glib/snapd-glib.h>
 #endif /* HAVE_LIBSNAPDGLIB */
 
+#ifdef __QNX__
+#define s6_addr32 __u6_addr.__u6_addr32
+#endif
 
 /*
  * Local functions...
